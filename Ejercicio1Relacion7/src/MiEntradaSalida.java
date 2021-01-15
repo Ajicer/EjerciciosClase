@@ -5,32 +5,34 @@ public class MiEntradaSalida {
 	
 	public static int solicitarEntero(String mensaje) {
 		int entero=0;
-		boolean correcto=false;
+		boolean error;
 		
 		do {
 		System.out.println(mensaje);
 		try {
 		entero=Integer.parseInt(teclado.nextLine());
-		correcto=true;
+		error=false;
 		} catch (Exception e) {
 			System.out.println("No es un numero");
+			error=true;
 		}
-		} while (correcto==false);
+		} while (error);
 		
 		return entero;
 	}
 	
 	public static int solicitarEnteroPositivo(String mensaje) {
 		int enteroPositivo=0;
-		boolean correcto=false;
+		boolean error;
 		do {
 			System.out.println(mensaje);
 			try {
 			enteroPositivo=Integer.parseInt(teclado.nextLine());
-			correcto=true;
+			error=false;
 			} catch (Exception e) {
+				error=true;	
 			}
-		} while (enteroPositivo<0 || correcto==false);
+		} while (enteroPositivo<0 || error);
 		
 		return enteroPositivo;
 	}
