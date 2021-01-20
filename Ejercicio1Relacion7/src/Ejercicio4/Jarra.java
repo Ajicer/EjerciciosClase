@@ -71,7 +71,7 @@ public class Jarra {
 			jarra2.cantidad=cantidad-capacidad;
 			cantidad=capacidad;
 		}else {
-			jarra2.cantidad=0;
+			jarra2.cantidad=0;		
 		}
 	}
 	
