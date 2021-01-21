@@ -99,7 +99,7 @@ public class Principal {
 			if(desplazado<0) {
 				throw new LineaException("Para desplazarte tienes que poner un número positivo!");
 			}
-			Principal.desplazarDerecha(linea, desplazado);
+			linea.moverDerecha(desplazado);
 			Principal.menu(linea);
 				break;
 		}
@@ -110,22 +110,6 @@ public class Principal {
 
 	}
 
-	private static void desplazarDerecha(Linea linea, double movimiento){
-		Punto punto;
-		double nuevaPos;
-		double x;
-		
-		punto=linea.getPunto1();
-		x= punto.getX();
-		nuevaPos=x+movimiento;
-		punto.setX(nuevaPos);
-		
-		punto=linea.getPunto2();
-		x= punto.getX();
-		nuevaPos=x+movimiento;
-		punto.setX(nuevaPos);
-		
-	}
 
 	private static void desplazarIzquierda(Linea linea, double movimiento) {
 		Punto punto;

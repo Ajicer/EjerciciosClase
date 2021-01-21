@@ -34,4 +34,9 @@ public class Linea {
 		return "Linea de "+punto1+" a "+punto2;
 	}
 	
+	public void moverDerecha (double moverDerecha) {
+		this.punto1.setX(this.punto1.getX()+moverDerecha);
+		this.punto2.setX(this.punto2.getX()+moverDerecha);
+	}
+	
 }
