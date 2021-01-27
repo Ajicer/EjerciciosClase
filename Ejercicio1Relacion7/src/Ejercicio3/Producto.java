@@ -59,9 +59,10 @@ public class Producto {
 	public String toString() {
 		return "Es un "+ descripcion+" de precio sin Iva de "+precioSinIva+"€ y de la categoria "+categoria.getNombreCategoria();
 	}
+	
 	public double precioConIva() {
 		double precioFinal;
-		precioFinal=precioSinIva+categoria.getIva();
+		precioFinal=(precioSinIva*(categoria.getIva()/100));
 		return precioFinal;
 	}
 

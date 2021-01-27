@@ -3,7 +3,7 @@ package Ejercicio3;
 public class Categoria {
 	private static final int IVA_MAXIMO = 21;
 	private String nombreCategoria;
-	private int iva;
+	private double iva;
 	
 	public Categoria (String nombreCategoria, int iva) {
 		this.nombreCategoria=nombreCategoria;
@@ -24,12 +24,12 @@ public class Categoria {
 		this.nombreCategoria = nombreCategoria;
 	}
 
-	public int getIva() {
+	public double getIva() {
 		return iva;
 	}
 
 	public void setIva(int iva) throws Exception{
-		if(iva> IVA_MAXIMO) {
+		if(iva> IVA_MAXIMO || iva<0) {
 			throw new VentaException("El IVA no puede ser superior al maximo");
 		}
 		this.iva = iva;
